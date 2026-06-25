@@ -151,6 +151,7 @@ export default function BMICalculatorWidget({ onCalculate }: BMICalculatorWidget
 
         const gainModerateCalories =
             recommendedCalories + 500;
+
         onCalculate({
             bmi: finalBmi,
             category,
