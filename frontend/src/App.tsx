@@ -1,20 +1,15 @@
-import { SignInButton, SignUpButton, Show, UserButton } from '@clerk/react'
+import Navbar from "./components/Navbar";
+import BMICalculator from "./components/BMICalculator";
 
-function App() {
+export default function Home() {
     return (
-        <>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
-                <h1>PaoFit</h1>
-                <Show when="signed-out">
-                    <SignInButton />
-                    <SignUpButton />
-                </Show>
-                <Show when="signed-in">
-                    <UserButton />
-                </Show>
-            </div>
-        </>
-    )
+        <div className="min-h-screen bg-slate-950 text-slate-100">
+            {/* Navbar */}
+            <Navbar />
+
+            {/* BMI Calculator Section */}
+            <BMICalculator />
+        </div>
+    );
 }
 
-export default App
